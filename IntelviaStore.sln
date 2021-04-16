@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelviaStore.Models", "IntelviaStore.Models\IntelviaStore.Models.csproj", "{1C716FE8-3A63-430F-8F76-33F8212082CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelviaStore.Web", "IntelviaStore.Web\IntelviaStore.Web.csproj", "{99F6E7E6-A6C2-4BDE-BBE2-FBCD76097349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelviaStore.Web", "IntelviaStore.Web\IntelviaStore.Web.csproj", "{99F6E7E6-A6C2-4BDE-BBE2-FBCD76097349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelviaStore.Api", "IntelviaStore.Api\IntelviaStore.Api.csproj", "{E9C44320-351A-479D-ADBF-F2EBDECE6246}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{99F6E7E6-A6C2-4BDE-BBE2-FBCD76097349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99F6E7E6-A6C2-4BDE-BBE2-FBCD76097349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99F6E7E6-A6C2-4BDE-BBE2-FBCD76097349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C44320-351A-479D-ADBF-F2EBDECE6246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C44320-351A-479D-ADBF-F2EBDECE6246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C44320-351A-479D-ADBF-F2EBDECE6246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C44320-351A-479D-ADBF-F2EBDECE6246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
