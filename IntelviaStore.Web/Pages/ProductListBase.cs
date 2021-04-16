@@ -23,7 +23,7 @@ namespace IntelviaStore.Web.Pages
                 ProductID = 1,
                 ProductName = "Produit 01",
                 UnitPrice = 1.99,
-                CreatedOn = new DateTime(1980, 10, 5),
+                UpdatedOn = new DateTime(1980, 10, 5),
                 Category = new Category { CategoryID = 1, CategoryName = "Montre" },
                 PhotoPath = "images/watch01.png"
             };
@@ -31,9 +31,9 @@ namespace IntelviaStore.Web.Pages
             Product p2 = new Product
             {
                 ProductID = 1,
-                ProductName = "Produit 01",
+                ProductName = "Produit 02",
                 UnitPrice = 1.99,
-                CreatedOn = new DateTime(1980, 10, 5),
+                UpdatedOn = new DateTime(1980, 10, 5),
                 Category = new Category { CategoryID = 2, CategoryName = "Livre" },
                 PhotoPath = "images/book01.png"
             };
@@ -41,9 +41,9 @@ namespace IntelviaStore.Web.Pages
             Product p3 = new Product
             {
                 ProductID = 1,
-                ProductName = "Produit 01",
+                ProductName = "Produit 03",
                 UnitPrice = 1.99,
-                CreatedOn = new DateTime(1980, 10, 5),
+                UpdatedOn = new DateTime(1980, 10, 5),
                 Category = new Category { CategoryID = 1, CategoryName = "Montre" },
                 PhotoPath = "images/watch02.png"
             };
@@ -51,9 +51,9 @@ namespace IntelviaStore.Web.Pages
             Product p4 = new Product
             {
                 ProductID = 1,
-                ProductName = "Produit 01",
+                ProductName = "Produit 04",
                 UnitPrice = 1.99,
-                CreatedOn = new DateTime(1980, 10, 5),
+                UpdatedOn = new DateTime(1980, 10, 5),
                 Category = new Category { CategoryID = 2, CategoryName = "Livre" },
                 PhotoPath = "images/book02.png"
             };
