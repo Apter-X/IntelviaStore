@@ -30,7 +30,7 @@ namespace IntelviaStore.Web.Pages
 
             Product p2 = new Product
             {
-                ProductID = 1,
+                ProductID = 2,
                 ProductName = "Produit 02",
                 UnitPrice = 1.99,
                 UpdatedOn = new DateTime(1980, 10, 5),
@@ -39,7 +39,7 @@ namespace IntelviaStore.Web.Pages
 
             Product p3 = new Product
             {
-                ProductID = 1,
+                ProductID = 3,
                 ProductName = "Produit 03",
                 UnitPrice = 1.99,
                 UpdatedOn = new DateTime(1980, 10, 5),
@@ -48,7 +48,7 @@ namespace IntelviaStore.Web.Pages
 
             Product p4 = new Product
             {
-                ProductID = 1,
+                ProductID = 4,
                 ProductName = "Produit 04",
                 UnitPrice = 1.99,
                 UpdatedOn = new DateTime(1980, 10, 5),
