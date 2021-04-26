@@ -51,7 +51,6 @@ namespace IntelviaStore.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> CreateProduct(Product product)
         public async Task<ActionResult<Product>> CreateProduct([FromBody]Product product)
         {
             try
@@ -67,7 +66,6 @@ namespace IntelviaStore.Api.Controllers
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error creating new employee record");
                     "Error creating new product record");
             }
         }
@@ -93,6 +91,27 @@ namespace IntelviaStore.Api.Controllers
                     "Error updating data");
             }
         }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<Product>> DeleteProduct(int id)
+        {
+            try
+            {
+                var productToDelete = await productRepository.GetProduct(id);
+
+                if (productToDelete == null)
+                {
+                    return NotFound($"Product with Id = {id} not found");
+                }
+
+                productRepository.DeleteProduct(id);
+
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error deleting data");
             }
         }
     }
