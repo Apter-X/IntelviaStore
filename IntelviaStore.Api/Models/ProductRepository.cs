@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace IntelviaStore.Api.Models
 {
-    public class EmployeeRepository : IProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly AppDbContext appDbContext;
 
-        public EmployeeRepository(AppDbContext appDbContext)
+        public ProductRepository(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
         }
