@@ -52,6 +52,7 @@ namespace IntelviaStore.Api.Controllers
 
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct(Product product)
+        public async Task<ActionResult<Product>> CreateProduct([FromBody]Product product)
         {
             try
             {
