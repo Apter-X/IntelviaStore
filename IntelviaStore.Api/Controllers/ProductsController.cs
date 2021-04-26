@@ -68,6 +68,31 @@ namespace IntelviaStore.Api.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Error creating new employee record");
+                    "Error creating new product record");
+            }
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult<Product>> UpdateEmployee(int id, [FromBody]Product product)
+        {
+            try
+            {
+                if (id != product.ProductID)
+                    return BadRequest("Product ID mismatch");
+
+                var productToUpdate = await productRepository.GetProduct(id);
+
+                if (productToUpdate == null)
+                    return NotFound($"Product with Id = {id} not found");
+
+                return await productRepository.UpdateProduct(product);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error updating data");
+            }
+        }
             }
         }
     }
