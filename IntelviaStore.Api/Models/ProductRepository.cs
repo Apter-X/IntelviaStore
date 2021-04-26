@@ -63,5 +63,11 @@ namespace IntelviaStore.Api.Models
                 await appDbContext.SaveChangesAsync();
             }
         }
+
+        public async Task<Product> GetProductByName(string name)
+        {
+            return await appDbContext.Products
+                .FirstOrDefaultAsync(e => e.ProductName == name);
+        }
     }
 }

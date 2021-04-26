@@ -11,5 +11,7 @@ namespace IntelviaStore.Api.Models
         Task<Product> AddProduct(Product product);
         Task<Product> UpdateProduct(Product product);
         void DeleteProduct(int productId);
+
+        Task<Product> GetProductByName(string name);
     }
 }
