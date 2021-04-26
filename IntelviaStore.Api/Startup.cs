@@ -29,6 +29,9 @@ namespace IntelviaStore.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IntelviaStore.Api", Version = "v1" });
             });
+            // Rest of the code
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
