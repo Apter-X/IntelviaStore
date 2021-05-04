@@ -1,6 +1,7 @@
 ﻿using IntelviaStore.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace IntelviaStore.Api.Models
@@ -62,6 +63,18 @@ namespace IntelviaStore.Api.Models
                 appDbContext.Products.Remove(result);
                 await appDbContext.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Product>> Search(string name)
+        {
+            IQueryable<Product> query = appDbContext.Products;
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(e => e.ProductName.Contains(name));
+            }
+
+            return await query.ToListAsync();
         }
 
         public async Task<Product> GetProductByName(string name)

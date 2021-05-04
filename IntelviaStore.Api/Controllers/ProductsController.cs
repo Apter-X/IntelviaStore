@@ -114,5 +114,26 @@ namespace IntelviaStore.Api.Controllers
                     "Error deleting data");
             }
         }
+
+        [HttpGet("{search}")]
+        public async Task<ActionResult<Product>> Search(string name)
+        {
+            try
+            {
+                var result = await productRepository.Search(name);
+
+                if (result.Any())
+                {
+                    return Ok(result);
+                }
+
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error retrieving data from the database");
+            }
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace IntelviaStore.Api.Models
         void DeleteProduct(int productId);
 
         Task<Product> GetProductByName(string name);
+        Task Search(string name);
     }
 }
