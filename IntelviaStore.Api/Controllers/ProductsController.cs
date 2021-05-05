@@ -122,7 +122,7 @@ namespace IntelviaStore.Api.Controllers
             {
                 var result = await productRepository.Search(name);
 
-                if (result.Any())
+                if (result.Count > 0)
                 {
                     return Ok(result);
                 }
