@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EmailService\EmailService.csproj" />
     <ProjectReference Include="..\IntelviaStore.Models\IntelviaStore.Models.csproj" />
   </ItemGroup>
 

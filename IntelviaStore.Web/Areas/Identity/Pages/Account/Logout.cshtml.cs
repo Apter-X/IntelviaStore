@@ -36,7 +36,7 @@ namespace IntelviaStore.Web.Areas.Identity.Pages.Account
             }
             else
             {
-                return RedirectToPage("../Pages/ProductList");
+                return RedirectToPage();
             }
         }
     }
