@@ -23,10 +23,12 @@ namespace IntelviaStore.Web
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddAuthentication("Identity.Application")
+                    .AddCookie();
 
             services.AddHttpClient<IProductService, ProductService>(client =>
             {
-                client.BaseAddress = new Uri("https://localhost:5001/");
+                client.BaseAddress = new Uri("https://localhost:44377/");
             });
         }
 
@@ -48,7 +50,8 @@ namespace IntelviaStore.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();

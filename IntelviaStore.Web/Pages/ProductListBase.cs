@@ -16,7 +16,7 @@ namespace IntelviaStore.Web.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            Products = (await ProductService.GetProducts()).ToList();
+           Products = (await ProductService.GetProducts()).ToList();
         }
     }
 }
