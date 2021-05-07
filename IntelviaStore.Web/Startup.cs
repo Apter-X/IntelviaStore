@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using IntelviaStore.Web.Services;
+using EmailService;
 
 namespace IntelviaStore.Web
 {
@@ -25,7 +26,11 @@ namespace IntelviaStore.Web
             services.AddServerSideBlazor();
             services.AddAuthentication("Identity.Application")
                     .AddCookie();
-
+            var emailConfig = Configuration
+                   .GetSection("EmailConfiguration")
+                   .Get<EmailConfiguration>();
+            services.AddSingleton(emailConfig);
+            services.AddScoped<IEmailSender, EmailSender>();
             services.AddHttpClient<IProductService, ProductService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44377/");
