@@ -19,6 +19,7 @@ namespace IntelviaStore.Api.Controllers
         }
 
         [HttpGet]
+
         public async Task<ActionResult> GetProducts()
         {
             try
@@ -50,8 +51,9 @@ namespace IntelviaStore.Api.Controllers
             }
         }
 
+
         [HttpPost]
-        public async Task<ActionResult<Product>> CreateProduct([FromBody]Product product)
+        public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
         {
             try
             {
@@ -71,7 +73,7 @@ namespace IntelviaStore.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult<Product>> UpdateEmployee(int id, [FromBody]Product product)
+        public async Task<ActionResult<Product>> UpdateEmployee(int id, [FromBody] Product product)
         {
             try
             {
@@ -91,6 +93,9 @@ namespace IntelviaStore.Api.Controllers
                     "Error updating data");
             }
         }
+
+
+       
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<Product>> DeleteProduct(int id)

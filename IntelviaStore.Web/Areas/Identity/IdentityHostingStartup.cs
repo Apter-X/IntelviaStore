@@ -19,7 +19,7 @@ namespace IntelviaStore.Web.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("IntelviaStoreWebContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IntelviaStoreWebContext>();
             });
         }
